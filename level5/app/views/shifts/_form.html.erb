@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :worker_id %>
-    <%= form.number_field :worker_id, id: :shift_worker_id %>
+    <%= form.select :worker_id, options_for_select(Worker.all.map{ |w| [w.id] }) %>
   </div>
 
   <div class="field">
