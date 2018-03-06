@@ -1,10 +1,24 @@
-# Level 5
+# README
 
-This level is a little bit different: we are now looking for a Rails application that helps us manage workers and shift.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-We are expecting a link to a hosted Rails application that enable us to:
-- add and edit workers
-- add and assign shifts
-- consult shifts
+Things you may want to cover:
 
-The application should be as simple as possible (for example, authentication is not expected).
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
