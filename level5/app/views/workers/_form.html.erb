@@ -10,18 +10,21 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-1">
+      <div class="field form-group">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, id: :worker_first_name, :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :worker_first_name %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :status %>
+        <%= form.text_field :status, id: :worker_status, :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status, id: :worker_status %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+      <div class="actions">
+        <%= form.submit 'Submit', :class => "btn btn-primary" %>
+      </div>
+    </div>
   </div>
 <% end %>

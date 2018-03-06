@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>ID:</strong>
+  <%= @worker.id %>
+</p>
+<p>
   <strong>First name:</strong>
   <%= @worker.first_name %>
 </p>
@@ -10,5 +14,10 @@
   <%= @worker.status %>
 </p>
 
+<p>
+  <strong>Price:</strong>
+  <%= @worker.price %>
+</p>
+<br>
 <%= link_to 'Edit', edit_worker_path(@worker) %> |
 <%= link_to 'Back', workers_path %>

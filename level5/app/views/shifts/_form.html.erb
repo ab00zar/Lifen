@@ -10,23 +10,26 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-1">
+      <div class="field form-group">
+        <%= form.label :planning_id %>
+        <%= form.number_field :planning_id, id: :shift_planning_id, :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :planning_id %>
-    <%= form.number_field :planning_id, id: :shift_planning_id %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :worker_id %>
+        <%= form.select :worker_id, options_for_select(Worker.all.map{ |w| [w.id] }), {}, { :class => "form-control" }  %>
+      </div>
 
-  <div class="field">
-    <%= form.label :worker_id %>
-    <%= form.select :worker_id, options_for_select(Worker.all.map{ |w| [w.id] }) %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :start_date %>
+        <%= form.text_field :start_date, id: :shift_start_date, :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.text_field :start_date, id: :shift_start_date %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+      <div class="actions">
+        <%= form.submit 'Submit', :class => "btn btn-primary" %>
+      </div>
+    </div>
   </div>
 <% end %>
