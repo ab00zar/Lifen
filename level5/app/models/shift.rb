@@ -1,6 +1,7 @@
 class Shift < ApplicationRecord
   belongs_to :worker
   before_save :update_worker_price
+  after_destroy :decrease_worker_price
 
   #update worker price (salary) while assigning a new shift to him/her or updating a shift
   def update_worker_price
@@ -14,6 +15,13 @@ class Shift < ApplicationRecord
 
   end
 
+  
+  #decrease worker price (salary) while destroying a shift
+  def decrease_worker_price
+    self.worker.update_attributes(price: self.worker.price - price_calculator(self.worker, start_date))
+  end
+
+
   #calculating the worker price (salary) based on his/her status
   def price_calculator(worker, date)
     case worker.status
@@ -26,5 +34,5 @@ class Shift < ApplicationRecord
     end
   end
 
-  
+
 end
